@@ -1,4 +1,4 @@
-# Generate Things using GPT-2
+# Generate Things Using GPT-2
 
 This is a script I use for generating lists of things (e.g. headlines, video
 game achievements, character names, etc.) using GPT-2. 
