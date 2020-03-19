@@ -2,10 +2,45 @@
 Script for easily generating a list of examples of "things" using
 GPT-2.
 
-The functions top_k_top_p_filtering and sample_sequence are mostly based on
-the examples here:
+The functions top_k_top_p_filtering and sample_sequence are modified from
+examples found here:
 https://github.com/huggingface/pytorch-transformers
 (Particularly "examples/run_generation.py")
+I think that makes this a derivative work?  Anyways, I've released
+everything under the same licence, so as not to cause confusion. 
+
+Copyright notice from source:
+
+  Copyright 2018 Google AI, Google Brain and Carnegie Mellon University Authors and the HuggingFace Inc. team.
+  Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+Copyright notice for this work:
+
+   Copyright 2019 Avery Hiebert
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 '''
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 

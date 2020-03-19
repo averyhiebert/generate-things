@@ -52,3 +52,11 @@ Breaking news:
 The model will then complete the line in a reasonable way (hopefully), and
 the results will be written intermittently to a text file.  The results should
 resemble the provided `example_generated_fake_news.txt`.
+
+## Copyright
+Since some of the functions are partially copied (with modification) from the
+[huggingface transformers](https://github.com/huggingface/transformers/blob/master/LICENSE) repo's examples, this is a derivative work of
+that one (which was released under the Apache License, version 2.0).
+For simplicity, I've decided to release this work under the same license,
+even though I think that's not technically required?
+See `LICENSE.txt`.
