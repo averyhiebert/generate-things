@@ -1,7 +1,7 @@
 # Generate Things using GPT-2
 
-The script I use for generating lists of things using GPT-2. 
-What things? Any things.
+This is a script I use for generating lists of things (e.g. headlines, video
+game achievements, character names, etc.) using GPT-2. 
 
 This uses the GPT-2 large model (774M parameters) from OpenAI, via the
 library by [huggingface](https://github.com/huggingface/transformers),
@@ -23,37 +23,32 @@ it public.
 You will need to have pytorch and CUDA installed.
 
 To control what type of thing is generated, create a context file, like
-the example `achievements.txt`:
-
+the example `news.txt`:
 ```
-Achievement
-Kill a monster with your bare hands.
-Find all twelve runic inscriptions.
-Discover who killed your father.
-Explore every room in the cursed castle.
-Defeat the incarnation of Death himself.
-Survive two critical attacks in a row.
-Learn how to fly.
-Meet the old librarian and learn his secret.
-Obtain the rank of grand master blacksmith.
+Breaking news
+America invades Vancouver Island, sparking world war fears
+Forest fires spring up all across the Pacific ocean; Experts baffled
+Studies show that eating rocks may reduce cancer risk
+Leaks suggest that the next iPhone will have twelve cameras
+Burkina Faso wins bid to host 2028 Olympics
 ```
 
 *This is not training data*, so you don't need a ton of examples, just enough
 to give the model some context about what you want it to generate.
 
 To run the script:
-`python generate-things.py achievements.txt`
+`python generate_things.py news.txt`
 
-(There are optional arguments as well.  Run `python generate-things.py --help` to list them.  I may get around to documenting them eventually.)
+(There are optional arguments as well.  Run `python generate_things.py --help` to list them.  I may get around to documenting them eventually.)
 
 The model will repeatedly be shown a context along the lines of:
-
 ```
-Achievement: Learn how to fly.
-Achievement: Survive two critical attacks in a row.
-Achievement: Find all twelve runic inscriptions.
-Achievement:
+Breaking news: Studies show that eating rocks may reduce cancer risk
+Breaking news: Burkina Faso wins bid to host 2028 Olympics
+Breaking news: America invades Vancouver Island, sparking world war fears
+Breaking news: 
 ```
 
 The model will then complete the line in a reasonable way (hopefully), and
-the results will be written intermittently to a text file.
+the results will be written intermittently to a text file.  The results should
+resemble the provided `example_generated_fake_news.txt`.
