@@ -1,3 +1,5 @@
+*Note: in case you somehow haven't heard, GPT-2 has been superceded by GPT-3, which is much better at the whole text-generation-without-fine-tuning thing.  But this script might still be handy if you want something that you can run locally, or if you don't have access to the GPT-3 API.*
+
 # Generate Things Using GPT-2
 
 This is a script I use for generating lists of things (e.g. headlines, video
